@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="app">
+        <div id="sidebar">
+            <h2>Boards</h2>
+            <button id="createBoardBtn">Create Board</button>
+            <ul id="boardList"></ul>
+        </div>
+        <div id="main">
+            <div id="boardDetails">
+                <p>No board selected. Create or select a board.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modalOverlay" id="modalOverlay">
+        <div class="modalContent">
+            <h3 id="modalTitle">Modal</h3>
+            <input type="text" id="modalInput" placeholder="Enter name..." />
+            <input type="hidden" id="modalContextType" />
+            <input type="hidden" id="modalContextId" />
+            <div class="modalButtons">
+                <button class="saveBtn" id="modalSaveBtn">Save</button>
+                <button class="cancelBtn" id="modalCancelBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

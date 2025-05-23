@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f5f7;
+}
+
+#app {
+    display: flex;
+    flex: 1;
+}
+
+#sidebar {
+    width: 250px;
+    background-color: #1e293b;
+    color: white;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+#sidebar h2 {
+    margin-bottom: 15px;
+}
+
+#createBoardBtn {
+    width: 100%;
+    padding: 10px;
+    background-color: #0ea5e9;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+#createBoardBtn:hover {
+    background-color: #0284c7;
+}
+
+#boardList {
+    list-style: none;
+}
+
+#boardList li {
+    background-color: #334155;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#boardList li.active {
+    background-color: #475569;
+}
+
+#boardList li:hover {
+    background-color: #64748b;
+}
+
+#main {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.boardTitleArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.addColumnBtn {
+    padding: 8px 14px;
+    background-color: #10b981;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.addColumnBtn:hover {
+    background-color: #059669;
+}
+
+.columnsContainer {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+}
+
+.column {
+    background-color: #e2e8f0;
+    border-radius: 8px;
+    padding: 10px;
+    min-width: 250px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.columnHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.columnButtons button {
+    background: none;
+    border: none;
+    color: #475569;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.ticket {
+    background-color: white;
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    cursor: pointer;
+}
+
+.ticket:hover {
+    background-color: #f1f5f9;
+}
+
+.ticketButtons {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.editTicketBtn,
+.deleteTicketBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.addTicket {
+    padding: 6px 10px;
+    background-color: #d97706;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.addTicket:hover {
+    background-color: #b45309;
+}
+
+/* Modal */
+.modalOverlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.modalButtons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.saveBtn {
+    background-color: #10b981;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cancelBtn {
+    background-color: #ef4444;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
